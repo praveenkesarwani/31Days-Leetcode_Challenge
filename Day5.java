@@ -1,3 +1,4 @@
+//space complexicity : O(n)
 class Solution {
     public int firstUniqChar(String s) {
         Map<Character,Integer>map = new HashMap<>();
