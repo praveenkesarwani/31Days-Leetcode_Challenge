@@ -23,6 +23,6 @@ class Solution {
     }
 
     public boolean isPerfectSquare(int num) {
-        return isPerfectSquare(num);
+        return binary_search(num);
     }
 }
