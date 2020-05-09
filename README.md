@@ -1,1 +1,1 @@
-![](java+leetcode.png)
+<img src ="java+leetcode.png" width = 200px>
