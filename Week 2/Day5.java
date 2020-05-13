@@ -4,7 +4,7 @@ The unique number must be at even position.
 nums[mid] == nums[mid ^ 1], for odd position compares with the previous number and
 for even position compares with the next number.
 Time Complexicity: O(log n)
- Space Complexicity: O(1)
+Space Complexicity: O(1)
 */
 class Solution {
     public int singleNonDuplicate(int[] nums) {
