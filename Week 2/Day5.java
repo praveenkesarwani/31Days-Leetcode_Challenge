@@ -1,12 +1,22 @@
-// Single Element in a Sorted Array
-// used bitwise operator 
-
+/*
+Problem: Single Element in a Sorted Array
+The unique number must be at even position.
+nums[mid] == nums[mid ^ 1], for odd position compares with the previous number and
+for even position compares with the next number.
+Time Complexicity: O(log n)
+ Space Complexicity: O(1)
+*/
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        int ans = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            ans = ans ^ nums[i];
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == nums[mid ^ 1])
+                left = mid + 1;
+            else
+                right = mid;
         }
-        return ans;
+        return nums[left];
     }
 }
