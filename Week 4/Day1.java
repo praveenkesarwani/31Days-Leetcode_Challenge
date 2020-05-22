@@ -21,6 +21,3 @@ class Solution {
         return sb.toString();
     }
 }
-/*
-Time Complexity: O(NlogN)
-*/
