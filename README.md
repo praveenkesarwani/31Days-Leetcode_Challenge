@@ -1,4 +1,4 @@
-<h1>LeetCode-May-31DaysChallenge</h1><br>
+<h1>May LeetCoding Challenge</h1><br>
 <img src ="image.png" width = 200px>
 <p>
 .<br>.<br>.<br>
