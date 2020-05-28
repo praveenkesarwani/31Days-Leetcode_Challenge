@@ -10,7 +10,7 @@ class Solution {
       int lo = Math.max(A[i][0], B[j][0]);
       int hi = Math.min(A[i][1], B[j][1]);
       if (lo <= hi)
-        ans.add(new int[]{lo, hi});
+        ans.add(new int[] { lo, hi });
 
       // Remove the interval with the smallest endpoint
       if (A[i][1] < B[j][1])
