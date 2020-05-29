@@ -1,22 +1,15 @@
-//Contiguous Array
-public class Solution {
-
-    public int findMaxLength(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(0, -1);
-        int maxlen = 0, count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            count = count + (nums[i] == 1 ? 1 : -1);
-            if (map.containsKey(count)) {
-                maxlen = Math.max(maxlen, i - map.get(count));
-            } else {
-                map.put(count, i);
-            }
-        }
-        return maxlen;
+//Uncrossed Lines
+class Solution {
+    public int maxUncrossedLines(int[] A, int[] B) {
+        int m = A.length, n = B.length, dp[][] = new int[m + 1][n + 1];
+        for (int i = 1; i <= m; ++i)
+            for (int j = 1; j <= n; ++j)
+                if (A[i - 1] == B[j - 1])
+                    dp[i][j] = 1 + dp[i - 1][j - 1];
+                else
+                    dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
+        return dp[m][n];
     }
 }
-/**
- * Time complexity : O(n) The entire array is traversed only once. Space
- * complexity: O(n) Maximum size of the HashMap map will be n,if all the elements are either 1 or 0.
- */
+//Time O(N^2)
+//Space O(N^2)
