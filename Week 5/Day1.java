@@ -1,3 +1,4 @@
+//Course Schedule
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         int[][] matrix = new int[numCourses][numCourses]; // i -> j
